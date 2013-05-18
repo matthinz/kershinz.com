@@ -1,0 +1,35 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// style.less
+//
+////////////////////////////////////////////////////////////////////////////////
+
+@import 'lib/preboot/preboot.less';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.std {
+    .retina-image("/images/std.jpg", "/images/std@2x.jpg", 480, 720);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-indent: 100%;
+    width: 100%;
+
+    h1, p {
+        left: 100%;
+        position: absolute;
+    }
+}
