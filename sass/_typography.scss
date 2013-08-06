@@ -1,0 +1,98 @@
+body {
+  color: #444;
+  font-family: $base-font-family;
+  font-size: $base-font-size-mobile;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+
+  @include breakpoint-tablet {
+    font-size: $base-font-size-tablet;
+  }
+
+  @include breakpoint-desktop {
+    font-size: $base-font-size-desktop;
+  }
+}
+
+p,
+ul, ol,
+h1, h2, h3, h4, h5, h6,
+address,
+dd {
+  margin: 0 0 $vmargin 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+
+  small {
+    color: $color-text;
+    display: block;
+    font-size: 0.5em;
+    font-weight: $weight-light;
+    letter-spacing: 0.0125em;
+    line-height: $base-line-height;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $color-black;
+    text-decoration: none;
+    border-bottom: 1px dotted ($color-black * 4);
+  }
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 180%;
+  line-height: $base-line-height * 0.75;
+}
+
+h3 {
+  font-size: 110%;
+  font-weight: $weight-normal;
+  letter-spacing: 0.0125em;
+  text-transform: uppercase;
+}
+
+a {
+  color: darken(theme-color(1), 25%);
+}
+
+small {
+  font-size: 0.6em;
+}
+
+big {
+  font-size: 1.3em;
+  font-weight: $weight-bold;
+}
+
+address {
+  color: #999;
+  font-family: $heading-font-family;
+  font-size: 100%;
+  font-style: normal;
+  text-align: center;
+
+  @include breakpoint-tablet {
+    font-size: 120%;
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+
+// question marks
+.q { }

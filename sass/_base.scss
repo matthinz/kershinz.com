@@ -1,0 +1,68 @@
+// _base.scss
+
+$width-tablet: 768px;
+$width-desktop: 960px;
+
+$gutter-width: 2.5%;
+$vmargin: 25px;
+$vmargin-huge: $vmargin * 3;
+
+// fonts
+$base-font-family: 'PT Serif', serif;
+
+$base-font-size-desktop: 18px;
+$base-font-size-tablet: 16px;
+$base-font-size-mobile: 14px;
+$base-font-weight: 400;
+$base-line-height: 1.42;
+
+$fancy-font-family: 'Raleway', sans-serif;
+
+$weight-light: 200;
+$weight-normal: 400;
+$weight-bold: 700;
+
+
+$heading-font-family: $fancy-font-family;
+$heading-line-height: 1;
+
+$color-text: #444;
+
+$primary-color: #8ccfca;
+$secondary-color: #5797a5;
+
+$color-black: #333;
+
+$color-teal: #86cbc5;
+$color-blue: #83bec8;
+$color-orange: #c9a687;
+$color-yellow: #d3d298;
+$color-green: #98c995;
+$color-purple: #cbcbcb;
+$color-pink: #e0bac0;
+
+$theme-colors: $color-pink, $color-orange, $color-yellow, $color-blue, $color-purple,  $color-teal, $color-green;
+$color-home: $color-pink;
+$color-venue: $color-orange;
+$color-bham: $color-yellow;
+$color-registry: $color-blue;
+$color-rsvp: $color-green;
+
+@function theme-color($index) {
+
+  @if ($index == 'home') { @return $color-home; }
+  @if ($index == 'venue') { @return $color-venue; }
+  @if ($index == 'bham') { @return $color-bham; }
+  @if ($index == 'registry') { @return $color-registry; }
+  @if ($index == 'rsvp') { @return $color-rsvp; }
+
+  @return nth($theme-colors, $index);
+
+}
+
+
+
+
+* {
+  @include box-sizing(border-box);
+}

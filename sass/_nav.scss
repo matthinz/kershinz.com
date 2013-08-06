@@ -1,0 +1,63 @@
+nav {
+
+  font-family: $fancy-font-family;
+  font-size: 80%;
+  font-weight: $weight-bold;
+  margin-bottom: $vmargin;
+  @include opacity(0.98);
+
+  a {
+    @include transition(all linear 0.3s);
+    @include button-background($primary-color);
+
+    float: left;
+    margin: 0;
+    padding: 2.5%;
+    text-align: center;
+    text-decoration: none;
+    width: 27.5%;
+
+    &.nav-home {
+      font-family: Arial, Helvetica, sans-serif;
+      width: 17.5%;
+    }
+
+    @each $c in home, venue, bham, registry {
+      &.nav-#{$c} {
+        @include button-background(theme-color($c));
+        &:hover {
+          @include button-background(theme-color($c));
+        }
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+
+}
+
+@include breakpoint-tablet {
+
+  nav {
+    font-size: 120%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+
+    a {
+      padding: 10px;
+      width: 25%;
+
+      &.nav-home {
+        width: 25%;
+      }
+
+
+    }
+  }
+}

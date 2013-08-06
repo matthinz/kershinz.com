@@ -1,0 +1,63 @@
+.container {
+  margin: 0 auto;
+  width: 100% - ($gutter-width * 2);
+
+  @include breakpoint-tablet {
+    width: 95%;
+  }
+
+  @include breakpoint-desktop {
+    width: $width-desktop;
+  }
+
+}
+
+.columns {
+  @include clearfix;
+}
+
+.columns-two {
+
+  $ie-adjustment: $gutter-width;
+
+  > .column {
+
+    margin-bottom: $vmargin;
+
+    @include breakpoint-tablet {
+      float: left;
+      width: 50% - ($gutter-width / 2);
+
+      html.lt-ie9 & {
+        width: 50% - ($gutter-width / 2) - $ie-adjustment;
+      }
+
+      &:first-child, &.first-child {
+        margin-right: $gutter-width;
+      }
+    }
+
+  }
+
+  &.columns-small-right {
+
+    @include breakpoint-tablet {
+
+      > .column:first-child, > .column.first-child {
+        width: 60% - ($gutter-width / 2);
+        html.lt-ie9 & {
+          width: 60% - ($gutter-width / 2) - $ie-adjustment;
+        }
+      }
+      > .column:last-child, > .column.last-child {
+        width: 40% - ($gutter-width / 2);
+        html.lt-ie9 & {
+          width: 40% - ($gutter-width / 2) - $ie-adjustment;
+        }
+      }
+
+    }
+
+  }
+
+}

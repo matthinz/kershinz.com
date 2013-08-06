@@ -1,0 +1,89 @@
+// wufoo.scss
+// Custom Wufoo CSS
+
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+@import "lib/normalize";
+@import "compass/css3";
+@import "compass/utilities";
+
+@import "base";
+@import "util";
+@import "responsive";
+@import "typography";
+@import "layout";
+@import "content";
+@import "forms";
+
+
+@import "nav";
+@import "boxes";
+@import "buttons";
+
+
+#container, html.embed {
+  background-color: transparent;
+}
+
+html.embed {
+
+  body {
+    padding: 0;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  #header {
+    display: none;
+  }
+
+  #saveForm {
+    @extend .button;
+    display: block;
+    width: 50%;
+    margin: 0;
+    padding: $vmargin 0;
+  }
+
+  p.instruct {
+    background: $color-yellow;
+    font-family: $heading-font-family;
+  }
+
+  .wufoo {
+    font-family: $base-font-family;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $heading-font-family;
+    }
+
+    li {
+      padding: ($vmargin / 2) 0;
+    }
+
+    section h3 {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .wufoo li.focused {
+    background-color: transparent;
+  }
+
+  form span.req {
+    color: darken($color-pink, 10%) !important;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  label.desc {
+    font-family: $fancy-font-family;
+  }
+}

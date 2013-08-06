@@ -1,0 +1,35 @@
+@mixin box-background($color, $border-side: top) {
+  background: lighten($color, 10%) image-url("paper.png");
+  border-#{$border-side}: 2px solid darken($color, 25%);
+}
+
+@mixin button-background($color: theme-color(7)) {
+
+  background: darken($color, 10%) image-url("paper.png");
+  border: none;
+  border-bottom: 2px solid darken($color, 25%);
+  color: lighten($color, 35%);
+
+  &:hover {
+    background-color: darken($color, 25%);
+    border-bottom-color: darken($color, 35%);
+    color: #fff;
+    @include text-shadow(0 0 5px darken($color, 35%));
+  }
+
+  &:active {
+    background-color: darken($color, 35%);
+    @include text-shadow(none);
+    border-top: 1px solid darken($color, 10%);
+    border-bottom-width: 1px;
+  }
+}
+
+@mixin paper-background($color: #fff) {
+  background-image: image-url("paper.png");
+  background-color: $color;
+}
+
+.clearfix {
+  @include clearfix;
+}

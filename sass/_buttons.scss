@@ -1,0 +1,25 @@
+// _buttons.scss
+
+
+
+button, .button, input[type=submit] {
+  @include button-background();
+  @include transition(text-shadow linear 0.1s, background-color linear 0.3s);
+  font-family: $fancy-font-family;
+  font-size: 125%;
+  letter-spacing: 3px;
+  padding: 5%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-block {
+  clear: both;
+  display: block;
+  font-size: 200%;
+  margin: 0 auto;
+
+  @include breakpoint-tablet {
+    width: 50%;
+  }
+}
