@@ -1,3 +1,0 @@
-
-html,body{margin:0;padding:0;height:100%;}
-.std{background-image:url("/images/std.jpg");background-repeat:no-repeat;background-position:center center;-webkit-background-size:contain;-moz-background-size:contain;-o-background-size:contain;background-size:contain;display:block;height:100%;margin:0 auto;overflow:hidden;position:relative;text-indent:100%;width:100%;}@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min--moz-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:2/1),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx){.std{background-image:url("/images/std@2x.jpg");background-size:480 720;}}.std h1,.std p{left:100%;position:absolute;}
