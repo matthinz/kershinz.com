@@ -83,7 +83,8 @@ html.embed {
     padding: 0;
   }
 
-  label.desc {
+  label.desc,
+  legend.desc {
     font-family: $fancy-font-family;
   }
 }
