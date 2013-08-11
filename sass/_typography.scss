@@ -18,7 +18,7 @@ p,
 ul, ol,
 h1, h2, h3, h4, h5, h6,
 address,
-dd {
+dl, dd {
   margin: 0 0 $vmargin 0;
 
   &:last-child {
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   a {
-    color: $color-black;
+    color: $color-black !important;
     text-decoration: none;
     border-bottom: 1px dotted ($color-black * 4);
   }
@@ -90,7 +90,15 @@ address {
   }
 }
 
+dl {
+  border: 1px solid $color-text;
+  border-left: 0;
+  border-right: 0;
+  padding: $vmargin 0;
+}
+
 dt {
+  font-family: $heading-font-family;
   font-weight: bold;
 }
 

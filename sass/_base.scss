@@ -1,9 +1,9 @@
 // _base.scss
 
-$width-tablet: 768px;
+$width-tablet: 700px;
 $width-desktop: 960px;
 
-$gutter-width: 2.5%;
+$gutter-width: 5%;
 $vmargin: 25px;
 $vmargin-huge: $vmargin * 3;
 
@@ -44,8 +44,8 @@ $color-pink: #e0bac0;
 $theme-colors: $color-pink, $color-orange, $color-yellow, $color-blue, $color-purple,  $color-teal, $color-green;
 $color-home: $color-pink;
 $color-venue: $color-orange;
-$color-bham: $color-yellow;
-$color-registry: $color-blue;
+$color-bham: $color-blue;
+$color-registry: $color-yellow;
 $color-rsvp: $color-green;
 
 @function theme-color($index) {
