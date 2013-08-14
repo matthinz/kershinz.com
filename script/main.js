@@ -55,7 +55,7 @@
             padding = parseInt($(document.body).css('padding-top'), 10);
 
         $('html,body').animate({
-            scrollTop: offset.top - (padding / 2)
+            scrollTop: offset.top - (padding / 2) + parseInt($el.css('padding-top'), 10) - 20
         }, 300);
     }
 
